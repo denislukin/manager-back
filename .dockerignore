@@ -1,7 +1,7 @@
 Dockerfile
-.dockerignore
+./.dockerignore
 node_modules
 npm-debug.log
 dist
-pgdata
+./pgdata
 .env
