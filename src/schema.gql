@@ -3,11 +3,11 @@
 # ------------------------------------------------------
 
 type User {
-  id: Int!
-  username: String!
+  id: Int
+  username: String
   displayName: String
 }
 
 type Query {
-  getUser: User!
+  getUsers: [User!]!
 }
