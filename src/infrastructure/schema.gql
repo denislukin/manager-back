@@ -2,12 +2,21 @@
 # THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
 # ------------------------------------------------------
 
-type User {
+type UserEntity {
   id: Int
   username: String
   displayName: String
 }
 
 type Query {
-  getUsers: [User!]!
+  getUsers: [UserEntity!]!
+}
+
+type Mutation {
+  createUser(createUserInput: CreateUserInput!): UserEntity!
+}
+
+input CreateUserInput {
+  username: String!
+  displayName: String!
 }

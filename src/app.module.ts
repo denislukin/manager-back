@@ -3,7 +3,7 @@ import { GraphQLModule } from '@nestjs/graphql';
 import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { UserModule } from './domain/user/user.module';
-import { User } from './domain/user/models/user.model';
+import { UserEntity } from './domain/user/user.entity';
 
 @Module({
   imports: [
@@ -18,7 +18,7 @@ import { User } from './domain/user/models/user.model';
       username: 'postgres',
       password: 'postgres',
       database: 'postgres',
-      entities: [User],
+      entities: [UserEntity],
       synchronize: true,
       autoLoadEntities: true,
     }),
