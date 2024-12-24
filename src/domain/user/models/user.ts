@@ -3,3 +3,8 @@ export interface UserInterface {
   username: string;
   displayName?: string;
 }
+
+export interface CreateUserInterface {
+  username: string;
+  displayName?: string;
+}

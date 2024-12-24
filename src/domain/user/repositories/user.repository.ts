@@ -1,10 +1,10 @@
 import { ObjectType, Field, Int } from '@nestjs/graphql';
 import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
-import { UserInterface } from './models/user';
+import { UserInterface } from '../models/user';
 
 @Entity({ name: 'users' })
 @ObjectType()
-export class UserEntity implements UserInterface {
+export class UserRepository implements UserInterface {
   @PrimaryGeneratedColumn()
   @Field(() => Int, { nullable: true })
   id: number;

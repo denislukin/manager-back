@@ -1,7 +1,8 @@
 import { ObjectType, Field, Int } from '@nestjs/graphql';
+import { UserInterface } from '../models/user';
 
 @ObjectType()
-export class GetUsersOutput {
+export class GetUsersOutput implements UserInterface {
   @Field(() => Int, { nullable: true })
   id: number;
 
